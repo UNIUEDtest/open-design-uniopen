@@ -55,8 +55,9 @@ added 1 package in 2s
 ### 1.1 克隆專案
 
 ```bash
-git clone https://github.com/nexu-io/open-design.git
-cd open-design
+# 克隆已包含 UniOpen 設計系統的團隊 repo
+git clone https://github.com/UNIUEDtest/open-design-uniopen.git
+cd open-design-uniopen
 ```
 
 ### 1.2 安裝依賴
@@ -106,30 +107,23 @@ pnpm tools-dev run web
 
 ---
 
-## 🎨 第 2 步：整合你的 Design System（15 分鐘）
+## 🎨 第 2 步：確認 Design System 已就位（2 分鐘）
 
-### 2.1 將 DESIGN.md 放入官方位置
+### 2.1 驗證設計系統已在正確位置
 
-根據 Open Design 的標準架構，設計系統應該放在 `design-systems/[系統名稱]/` 資料夾：
+clone 下來的 repo 已經包含 UniOpen 設計系統，直接確認即可：
 
 ```bash
-# 1. 確認在 open-design 根目錄
-cd ~/open-design
-
-# 2. 建立設計系統資料夾
-mkdir -p design-systems/uniopen
-
-# 3. 複製你的 DESIGN.md 進去
-cp DESIGN.md design-systems/uniopen/DESIGN.md
-
-# 4. 驗證檔案已複製
+# 確認檔案存在
 ls -la design-systems/uniopen/DESIGN.md
 ```
 
 **預期輸出：**
 ```
--rw-r--r--  1 user  staff  45KB  May  4 12:00 design-systems/uniopen/DESIGN.md
+-rw-r--r--  1 user  staff  11KB  May  4 12:00 design-systems/uniopen/DESIGN.md
 ```
+
+✅ **看到這個輸出就代表設計系統已就位，不需要任何額外操作。**
 
 ### 2.2 重啟 daemon 以載入設計系統
 
@@ -443,8 +437,13 @@ PM/開發反饋 →
 
 **A:** 設計系統沒有載入。檢查：
 1. 右上方 **Design System** 選擇器是否是 **UniOpen Brand**？
-2. 如果沒看到，重新上傳 `DESIGN.md`
-3. 刷新頁面
+2. 如果沒看到，重啟 daemon：
+```bash
+pnpm tools-dev stop
+sleep 2
+pnpm tools-dev run web
+```
+3. 重新整理瀏覽器（Cmd+R）
 
 ### Q2: "Detect Agents" 找不到 Claude Code 或其他代理？
 
