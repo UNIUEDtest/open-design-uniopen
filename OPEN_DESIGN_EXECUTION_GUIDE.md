@@ -111,7 +111,7 @@ pnpm tools-dev run web
 
 ### 2.1 驗證設計系統已在正確位置
 
-clone 下來的 repo 已經包含 UniOpen 設計系統，直接確認即可：
+clone 下來的 repo 已經包含 uniopen 設計系統，直接確認即可：
 
 ```bash
 # 確認檔案存在
@@ -150,7 +150,7 @@ Daemon: http://127.0.0.1:XXXXX/
 1. **重新整理瀏覽器**（Cmd+R 或 Ctrl+R）
 2. **進入任一個 Project**（或建立新的）
 3. **查看頂部的「Design System」下拉菜單**
-4. **搜尋 "uniopen" 或 "UniOpen"**
+4. **搜尋 "uniopen" **
 
 應該能看到：
 ```
@@ -163,7 +163,7 @@ Daemon: http://127.0.0.1:XXXXX/
 
 ### 2.4 測試設計系統是否正確應用
 
-選擇 **「UniOpen Brand」**，然後在聊天框輸入：
+選擇 **「uniopen Brand」**，然後在聊天框輸入：
 
 ```
 create a button with our brand primary color.
